@@ -13,8 +13,12 @@
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+
+        <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+        
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -51,6 +55,83 @@
                 <p class="masthead-subheading font-weight-light mb-0">Game Designer - Developer - Programmer</p>
             </div>
         </header>
+        <!-- Featured Project-->
+        
+        <section class="page-section  text-white mb-0 portfolio-details" id="portfolio-details">
+            <div class="container">
+                <!-- About Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-secondary">Featured Work</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom text-secondary">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- About Section Content-->
+                <div class="row text-secondary ">
+                    <div class="col-lg-8 ml-auto ">
+                        <div class="col-lg-8">
+                            <div class="w3-display-container mySlides">
+                              <img src="assets/img/perlinNoise.png" style="width:100%">
+                              <div class="w3-display-bottomright w3-small w3-container w3-padding-16 w3-black">
+                                Simple Noise
+                              </div>
+                            </div>
+
+                            <div class="w3-display-container mySlides">
+                              <img src="assets/img/FYP.png" style="width:100%">
+                              <div class="w3-display-topleft w3-small w3-container w3-padding-16 w3-black">
+                                Perlin Noise - Color Map
+                              </div>
+                            </div>
+
+                            <button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
+                            <button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
+                        </div>
+                        </div>
+                        <div class="col-lg-4 mr-auto">
+                            <br>
+                            <div class="row text-secondary">
+                                <p class="lead"> - Procedural Geneartion</p>
+                            </div>
+                            <div class="row text-secondary">
+                                <p class="lead"> - Perlin Noise</p>
+                            </div>
+                            <div class="row text-secondary">
+                                <p class="lead"> - Fully Customizable</p>
+                            </div>
+                            <div class="row text-secondary">
+                                <p class="lead"> - Mesh creation in progress</p>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Resume-->
+        <section class="page-section bg-primary text-white" id="contact">
+            <div class="container">
+                <!-- Contact Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-white mb-0">Resume</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                    <div class="row text-center">
+                        <div class="col-lg-12 "><p class="lead">Please Find my C.V. linked below, Can't wait to start working with you!</p></div>
+                    </div>
+                <div class="text-center mt-">
+                    <a class="btn btn-xl btn-outline-light" href="assets/CV.pdf">
+                        <i class="fas fa-download mr-2"></i>
+                        C.V.
+                    </a>
+                </div> 
+                
+            </div>
+        </section>
+        
         <!-- Portfolio Section-->
         <section class="page-section portfolio" id="portfolio">
             <div class="container">
@@ -135,14 +216,8 @@
                 <!-- About Section Content-->
                 <div class="row">
                     <div class="col-lg-4 ml-auto"><p class="lead">A student at Staffordshire University currently studying Computer Games Development BSc</p></div>
-                    <div class="col-lg-4 mr-auto"><p class="lead">Familiar with Game Engines such as Unity and Unreal and competent with C#, javascript and also HTML, while currently refreshing myself with C++</p></div>
+                    <div class="col-lg-4 mr-auto"><p class="lead">Familiar with Unity and Unreal and competent with C#, javascript and also HTML, currently refreshing myself with C++</p></div>
                 </div>
-                <!--<div class="text-center mt-4">
-                    <a class="btn btn-xl btn-outline-light" href="https://startbootstrap.com/theme/freelancer/">
-                        <i class="fas fa-download mr-2"></i>
-                        Free Download!
-                    </a>
-                </div> -->
             </div>
         </section>
         <!-- Contact Section-->
@@ -260,7 +335,8 @@
                                     <!-- Portfolio Modal - Image-->
                                     <img class="img-fluid rounded mb-5" src="assets/img/Pacman.png" alt="" />
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">As part of my first University assignment we were tasked with creating a pacman game using a c++ library called "SDL" although being basic this was the first game I ever created. It featured basic AI for controlling the ghosts with a tilemap, pickups and win loss conditions for the game.</p>
+                                    <p class="mb-5">First ever game created using SDL, included: Tile Maps, Simple AI, Abilities and win - loss conditions</p>
+    
                                     <button class="btn btn-primary" data-dismiss="modal">
                                         <i class="fas fa-times fa-fw"></i>
                                         Close Window
@@ -294,7 +370,7 @@
                                     <!-- Portfolio Modal - Image-->
                                     <img class="img-fluid rounded mb-5" src="assets/img/dce69a93f091bcbbf5aafabafb81d64a.png" alt="" />
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">My second university assignment featured learning how to create objects from scratch and rendering them in a 3d space, we used a version of direct x for this called "Open GL". In this assignment I learned how to create cubes from scratch, mark their positions and apply textures to them.</p>
+                                    <p class="mb-5">My second project featured learning how to create objects from scratch and rendering them in a 3d space using Open GL. From this I learned how to create shapes from scratch, mark their positions, calculate normals  and apply textures to them.</p>
                                     <button class="btn btn-primary" data-dismiss="modal">
                                         <i class="fas fa-times fa-fw"></i>
                                         Close Window
@@ -328,7 +404,7 @@
                                     <!-- Portfolio Modal - Image-->
                                     <img class="img-fluid rounded mb-5" src="assets/img/Mario3.png" alt="" />
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">My third assignment was creating a Mario 3 clone, this was programmed in C++ and used the "SLD" library. This game was my most advanced in first year which featured different enemy types, boss mechanics and multiple levels.</p>
+                                    <p class="mb-5">My third project was Mario 3 clone, this was programmed in C++ and used the SLD library. This was my most advanced project at the time which featured different enemy types, boss mechanics and multiple levels.</p>
                                     <button class="btn btn-primary" data-dismiss="modal">
                                         <i class="fas fa-times fa-fw"></i>
                                         Close Window
@@ -362,7 +438,9 @@
                                     <!-- Portfolio Modal - Image-->
                                     <img class="img-fluid rounded mb-5" src="assets/img/TD.png" alt="" />
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">In my second year we started using game engines to develop our games, and this is where I fell in love with unity. I created a fully working tower defence game which features multiple levels with different AI enemies and multiple towers and upgrade paths.</p>
+                                    <p class="mb-5">This is a tower defence game creation in unityu, featured different enemy types, turrets, upgrade paths and different levels</p>
+                                    <p class="">Link to Gameplay Video:</p>
+                                    <p><a class="" href="https://www.youtube.com/watch?v=trPOOViQXf0&feature=youtu.be">Click Me</a></p>
                                     <button class="btn btn-primary" data-dismiss="modal">
                                         <i class="fas fa-times fa-fw"></i>
                                         Close Window
@@ -396,7 +474,7 @@
                                     <!-- Portfolio Modal - Image-->
                                     <img class="img-fluid rounded mb-5" src="assets/img/OpenWorldInDepth.png" alt="" />
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-5">For a Game Engine Programming module, I decided to create an open world third person shooter called "Havok", the game was made within 8 weeks and was overscored, this is where I learned good structure was infinitely important. The game is all about causing as much havoc as possible within a minute by going on a killing spree and becoming wanted, you would get points for the number of casualties and would be targeted by increasingly difficult waves of police. In this module I explored many different principles to try and maximize efficiency within the game, and to some degree it was very successful. The game could be improved but within the time period of its creation, it proved successful. Techniques used throughout this game were: Polymorphism, FSM, object pooling and singleton. </p>
+                                    <p class="mb-5">This is a open world third person shooter called Havok, the game revolves around getting wanted and then fighting through waves of police in compete for a high score. This game uses: Singleton, FSM, and Object pooling</p>
                                     <button class="btn btn-primary" data-dismiss="modal">
                                         <i class="fas fa-times fa-fw"></i>
                                         Close Window
@@ -451,6 +529,11 @@
         <script src="assets/mail/jqBootstrapValidation.js"></script>
         <script src="assets/mail/contact_me.js"></script>
         <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
+        <script src="js/scripts.js"></script> 
+          <div id="preloader"></div>
+
+
+  <script src="assets/js/main.js"></script>
+        
     </body>
 </html>
