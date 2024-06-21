@@ -37,7 +37,7 @@
                 <div class="sidebar-content">
                     <h1 class="sidebar-heading"> <a href="index.html">Luke Barsby</a></h1>
                     <p class="sidebar-p">Recent Games Developer graduate, working on projects</p>
-                    <p class="sidebar-p">Located in West Midlands.</p>
+                    <p class="sidebar-p">Located in the Midlands.</p>
                     <ul class="sidebar-menu">
                         <!-- Link-->
                         <li class="sidebar-item"><a href="index.html" class="sidebar-link">Portfolio</a></li>
@@ -48,7 +48,6 @@
                     </ul>
                     <p class="sidebar-p">Get In Touch</p>
                     <p class="social"><a href="https://twitter.com/BarsbyDevelopm1" data-animate-hover="pulse" class="external twitter"><i class="fa fa-twitter"></i></a><a href="mailto:luke.barsby@hotmail.co.uk" data-animate-hover="pulse" class="email"><i class="fa fa-envelope"></i></a></p>
-                    <p class="sidebar-p">This website is currently under maintenance</p>
                 </div>
             </div>
             <!--   *** SIDEBAR END ***  -->
@@ -66,34 +65,52 @@
                             <blockquote class="blockquote">
                                 <p class="mb-0">I do not own any rights to the sprites used for this project, It was created with no intent to share, publish or profit from.</p>
                             </blockquote>
-                            <div id="main-slider" class="owl-carousel owl-theme">
-                                <div class="item"><img src="img/portfolio/Wolf/Picture1.png" alt="" class="img-fluid"></div>
-                                <div class="item"><img src="img/portfolio/Wolf/Picture2.png" alt="" class="img-fluid"></div>
-                                <div class="item"><img src="img/portfolio/Wolf/Picture3.png" alt="" class="img-fluid"></div>
-                                <div class="item"><img src="img/portfolio/Wolf/Picture25.png" alt="" class="img-fluid"></div>
-                                <div class="item"><img src="img/portfolio/Wolf/Picture41.png" alt="" class="img-fluid"></div>
-                                <div class="item"><img src="img/portfolio/Wolf/Picture52.png" alt="" class="img-fluid"></div>
+
+
+                            <div class="row">
+                                <div class="col-xl-3"><div class="content-column-content"> <iframe height="600" width="1000" src="https://www.youtube.com/watch?v=OmldyAqRWVs"></iframe> </div></div>
+                                    <div class="col-xl-6"></div>
+                                <div class="col-xl-3"></div>
                             </div>
+
+
                             <!-- /#main-slider-->
-                            <p>For this project, I initially gave myself 48 hours, and during that time I got most of the foundations in place. I had:</p>
+                            <p>For this project, I initially gave myself 48 hours, and during that time I got some good gameplay foundations in place. I had:</p>
                             <ol>
                                 <li>All Textures and Materials created for player, enemies and environments</li>
                                 <li>Re-creation of the level using Pro-Builder</li>
                                 <li>Simple door controllers</li>
-                                <li>Basic enemy Ai</li>
+                                <li>Basic enemy Ai, that b-lined for the player on sight and had an idle when not in combat</li>
                                 <li>A Player controller that could die, walk and shoot</li>
                             </ol>
-                            <p>But the game was far from finished in this state.</p>
+                            <p>Overall the game was in a decent state given the time frame, but the game was far from finished in this state.</p>
+
+                            <div class="row">
+                                <div class="col-xl-6">
+                                    <div class="content-column-content">
+                                        <div id="main-slider" class="owl-carousel owl-theme">
+                                            <div class="item"><img src="img/portfolio/Wolf/Picture1.png" alt="" class="img-fluid"></div>
+                                            <div class="item"><img src="img/portfolio/Wolf/Picture2.png" alt="" class="img-fluid"></div>
+                                            <div class="item"><img src="img/portfolio/Wolf/Picture3.png" alt="" class="img-fluid"></div>
+                                            <div class="item"><img src="img/portfolio/Wolf/Picture25.png" alt="" class="img-fluid"></div>
+                                            <div class="item"><img src="img/portfolio/Wolf/Picture41.png" alt="" class="img-fluid"></div>
+                                            <div class="item"><img src="img/portfolio/Wolf/Picture52.png" alt="" class="img-fluid"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3"></div>
+                                <div class="col-xl-3"></div>
+                            </div>
 
                             <blockquote class="blockquote">
                                 <p class="mb-0">Wolfenstein Re-visited</p>
                             </blockquote>
                             <h2>Updates</h2>
                             <p>
-                                I didn't like leaving the game in the state it was in, so I decided to re-visit its development of it. I accomplished a lot in the 48 hours but a lot was missing from the game and because of the timeframe I gave myself, a lot of the programming was in a ""prototyping stage" and quickly done
+                                Even though I attempted the challenge, I didn't like leaving the game in the state it was in. I decided to re-visit its development of it. I accomplished a lot in the 48 hours but a lot was missing from the game and because of the timeframe I gave myself, a lot of the programming was in a "prototyping stage" and quickly done
                             </p>
                             <p>
-                                During the re-visit of the game, I added all areas that were missing, in addition to, refactored all the programming in the project to make it more efficient, structured and decoupled. Items that were added were:
+                                During the re-visit of the game, I added all areas that were missing, in addition to, refactored some of the programming in the project to make nicer... Items that were added were:
                             </p>
                             <ul>
                                 <li>Sound Manager</li>
@@ -108,14 +125,24 @@
                                 One part of this project that I liked was the map generation system I created. It took a while to block out the first level and during this time I wanted to create a streamlined process to generate maps in the future.
                             </p>
                             <p>
-                                As this was a game re-creation, I had access to all level designs in the game. For this, I made a system which takes in a bird's-eye view image of the map and then scans each block in a 7x7 pixel area, generating a block in the same position of the texture scanned. This compares it to a list of  textures/prefabs that correlate to that pixel area and generate the correct block/object/Enemy. The system isn't perfect and could be improved but it successfully works in generating each map at playtime, with placements of every wall, enemy, pickup or door. Here is a gif of the generation running with a coroutine slowing down the generation process:
+                                As this was a game re-creation, I had access to all the level designs in the game. For this map generation system it takes in the level design images that can be sourced online, and then it iterates though the image comparing each cell to the correct block/object/Enemy and spawns it in at the correct position. The system isn't perfect and could be improved but it successfully works in generating each map at playtime, to streamline the level creation process, with placements of every wall, enemy, pickup or door. Here is a gif of the generation running with a coroutine slowing down the generation process:
                             </p>
-                            <img src="img/portfolio/Wolf/MapGen.gif" alt="" class="img-fluid">
+
+                            <div class="row">
+                                <div class="col-xl-6"><div class="content-column-content"><img src="img/portfolio/Wolf/MapGen.gif" alt="" class="img-fluid"></div></div>
+                                <div class="col-xl-3"></div>
+                                <div class="col-xl-3"></div>
+                            </div>
+                            
                             <p class="lead"></p>
                             <p class="lead">
                                 Generated from this image:
                             </p>
-                            <img src="img/portfolio/Wolf/e1m1.png" alt="" class="img-fluid">
+                            <div class="row">
+                                <div class="col-xl-6"><div class="content-column-content"><img src="img/portfolio/Wolf/e1m1.png" alt="" class="img-fluid"></div></div>
+                                <div class="col-xl-3"></div>
+                                <div class="col-xl-3"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
